@@ -59,6 +59,9 @@ var plugins = [
             console.log('版本是：' + JSON.stringify(stats.toJson().hash));
         });
     },
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+    }),
 ];
 
 var HtmlWebpackPlugin = require("html-webpack-plugin");
