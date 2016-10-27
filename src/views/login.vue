@@ -14,4 +14,15 @@
 </style>
 
 <script>
+    export default {
+        beforeCreate(){
+            console.log("login beforeCreated function");
+        },
+        beforeMount(){
+            console.log("login beforeMount function");
+        },
+        created () {
+            console.log("login created function");
+        }
+    }
 </script>

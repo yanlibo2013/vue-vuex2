@@ -12,13 +12,11 @@ export const Login = resolve => {
         resolve(require('./login.vue'));
     })
 };
-
 export const User = resolve => {
     require.ensure(['./user.vue'], () => {
         resolve(require('./user.vue'));
     })
 };
-
 export const Regist = resolve => {
     require.ensure(['./regist.vue'], () => {
         resolve(require('./regist.vue'));
