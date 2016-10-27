@@ -18,6 +18,6 @@ const router = new VueRouter({
     { path: '/', component: Home },
     { path: '/login', component: Login }
   ]
-})
+});
 
 export default router;
