@@ -1,13 +1,18 @@
-import 'babel-polyfill'
+/*
+ * @Author: henry yan
+ * @Date:   2016-10-19 16:47:00
+ * @Last Modified by:   henry yan
+ * @Last Modified time: 2016-10-19 16:47:00
+ */
 import Vue from 'vue'
-import App from './components/App.vue'
-import store from './store'
-import { currency } from './currency'
-
-Vue.filter('currency', currency);
+import App from './app.vue'
+import router from './router'
 
 new Vue({
-  el: '#app',
-  store,
-  render: h => h(App)
-})
+    /*Store,*/
+    router,
+    ...App
+}).$mount('#app');
+
+
+
