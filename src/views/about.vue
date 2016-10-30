@@ -12,7 +12,6 @@
     .div-app{
         background-color:rebeccapurple;
     }
-
 </style>
 
 <script>

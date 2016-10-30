@@ -5,7 +5,7 @@ import Home from './shopping-car/components/App.vue';
 
 
 //异步组件
-import {Login,User,Regist} from './views/index'
+import {Login,User,Regist,About} from './views/index'
 
 Vue.use(VueRouter);
 const router = new VueRouter({

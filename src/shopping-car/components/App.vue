@@ -21,7 +21,11 @@
   Vue.filter('currency', currency);
   export default {
     store:store,
-    components: { ProductList, Cart }
+    components: { ProductList, Cart },
+    beforeRouteLeave (to, from, next) {
+       console.log(to);
+       console.log(from);
+    }
   }
 </script>
 <style lang="sass">
