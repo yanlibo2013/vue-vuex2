@@ -5,14 +5,15 @@ import Home from './shopping-car/components/App.vue';
 
 
 //异步组件
-import {Login,User,Regist,About} from './views/index'
+import {Login,User} from './views/index'
+
 
 Vue.use(VueRouter);
 const router = new VueRouter({
-    mode: 'history',
-     linkActiveClass: 'active',
+    mode: "hash",
+    base: __dirname,
     routes: [
-        {path: '/', component: Home},
+       /* {path: '/', component: Home},*/
         {path: '/login', component: Login},
         {path: '/user', component: User},
        /* {path: '/regist', component: Regist},

@@ -5,7 +5,10 @@
 * @Last Modified time: 2016-10-19 16:47:00
 */
 <template>
-    <h1>User!!!</h1>
+    <div class="user">
+        <h1>User!!!</h1>
+    </div>
+
 
 </template>
 <style>
@@ -13,7 +16,7 @@
         background-color:rebeccapurple;
     }
 
-    body{
+    .user{
         width: 100%;
         height:612px;
         background: url(/build/image/bg.png) center center no-repeat;

@@ -7,6 +7,11 @@
 */
 
 //require.ensure是webpack用来代码分割的，可以按需加载
+/*export const Home = resolve => {
+    require.ensure(['./index.vue'], () => {
+        resolve(require('./index.vue'));
+    })
+};*/
 export const Login = resolve => {
     require.ensure(['./login.vue'], () => {
         resolve(require('./login.vue'));

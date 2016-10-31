@@ -7,10 +7,7 @@
 * 根组件，主要用于引入全局的css和js
 */
 <template>
-  <!--<div class="main">
-    <router-view transition="expand" transition-mode="out-in"></router-view>
-  </div>-->
-  <div class="wrapper">
+  <div>
     <router-view></router-view>
   </div>
 </template>

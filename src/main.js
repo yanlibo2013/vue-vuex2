@@ -8,11 +8,18 @@ import Vue from 'vue'
 import App from './app.vue'
 import router from './router'
 
+
 new Vue({
-    /*Store,*/
+ /*Store,*/
+ router,
+ ...App
+ }).$mount('#app');
+
+/*new Vue({
+    /!*Store,*!/
     router,
     ...App
-}).$mount('#app');
+}).$mount('#app');*/
 
 
 
