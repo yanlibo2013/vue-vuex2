@@ -13,10 +13,22 @@
 </template>
 
 <script>
-
+  import {mapGetters, mapActions } from 'vuex'
   export default {
     /* 注册顶层 App 的 store */
+    created () {
+      this.$store.dispatch('getDevicetype');
+    }
   }
+/*
+
+  console.log(mapGetters({
+    deviceStatus: 'deviceStatus'
+  }));
+*/
+
+
+
 
 </script>
 <style lang="sass">

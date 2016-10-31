@@ -6,11 +6,12 @@
  */
 import Vue from 'vue'
 import App from './app.vue'
-import router from './router'
+import router from './router';
+import store from './store'
 
 
 new Vue({
- /*Store,*/
+ store,
  router,
  ...App
  }).$mount('#app');

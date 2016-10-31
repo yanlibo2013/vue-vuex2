@@ -5,7 +5,7 @@
 * @Last Modified time: 2016-10-19 16:47:00
 */
 <template>
-   <h1>home!!!</h1>
+  <root></root>
 </template>
 <style>
   .div-app{
@@ -14,4 +14,13 @@
 </style>
 
 <script>
+   import pc from './pc/index'
+   import mobile from './mobile/index_mobile'
+   import device from '../../common/device'
+
+   let root=device.judge(pc,mobile);
+
+   export default {
+      components: {root}
+   }
 </script>

@@ -1,23 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from './shopping-car/components/App.vue';
-
-
 //异步组件
-import {Login,User} from './views/index'
-
-
+import {Login,User,About,Home} from './components/index'
 Vue.use(VueRouter);
 const router = new VueRouter({
     mode: "hash",
     base: __dirname,
     routes: [
-       /* {path: '/', component: Home},*/
-        {path: '/login', component: Login},
+        {
+            path: "/",
+            redirect: {
+                name: "home"
+            },
+        }, {
+            path: "/home",
+            name: 'home',
+            component:Home
+        },
+        {path: '/about', component: About},
         {path: '/user', component: User},
-       /* {path: '/regist', component: Regist},
-        {path: '/about', component: Regist}*/
+
     ]
 });
 
