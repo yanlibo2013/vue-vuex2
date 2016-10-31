@@ -22,10 +22,10 @@ export const User = resolve => {
         resolve(require('./regist.vue'));
     })
 };*/
-
 /*
 export const About = resolve => {
     require.ensure(['./about.vue'], () => {
         resolve(require('./about.vue'));
     })
-};*/
+};
+*/

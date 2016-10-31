@@ -9,13 +9,14 @@ import {Login,User,Regist,About} from './views/index'
 
 Vue.use(VueRouter);
 const router = new VueRouter({
-    /*mode: 'history',
-     linkActiveClass: 'active',*/
+    mode: 'history',
+     linkActiveClass: 'active',
     routes: [
         {path: '/', component: Home},
         {path: '/login', component: Login},
         {path: '/user', component: User},
-        {path: '/regist', component: Regist}
+       /* {path: '/regist', component: Regist},
+        {path: '/about', component: Regist}*/
     ]
 });
 

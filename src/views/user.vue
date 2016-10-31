@@ -13,6 +13,12 @@
         background-color:rebeccapurple;
     }
 
+    body{
+        width: 100%;
+        height:612px;
+        background: url(/build/image/bg.png) center center no-repeat;
+    }
+
 </style>
 
 <script>

@@ -44,14 +44,14 @@ var plugins = [
 if (process.env.PRODUCTION) {
     
     // 清除之前的上线文件
-    prod.folder('./build');
+    prod.folder('./build/js');
 
     //压缩
     plugins.push(new webpack.optimize.UglifyJsPlugin({compress: {warnings: false } }));
     
     // 生成模板文件
     plugins.push(new HtmlWebpackPlugin({
-        filename: '../index.html',//会生成index.html在根目录下,并注入脚本
+        filename: '../../index.html',//会生成index.html在根目录下,并注入脚本
         template: './src/index.tpl',
         inject:true //此参数必须加上，不加不注入
     }))
@@ -62,7 +62,7 @@ prod.clearMd5();
 
 var entry = ['./src/main'],
     cdnPrefix = "",
-    buildPath = "/build/",
+    buildPath = "/build/js/",
     publishPath = production ? cdnPrefix + buildPath : buildPath;
 
 module.exports = {
