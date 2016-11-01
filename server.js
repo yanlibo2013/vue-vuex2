@@ -39,10 +39,6 @@ new WebpackDevServer(webpack(config), {
     historyApiFallback: true,
     stats: { colors: true},
     proxy: {
-        '/api/*': {
-            target: 'http://localhost:3001',
-            secure: false
-        },
         '/qm/*': {
             target: 'http://localhost:3001',
             secure: false
