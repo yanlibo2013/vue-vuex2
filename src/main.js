@@ -6,7 +6,7 @@
  */
 import Vue from 'vue'
 import App from './app.vue'
-import router from './router';
+import router from './routes/';
 import store from './store'
 
 
@@ -15,12 +15,5 @@ new Vue({
  router,
  ...App
  }).$mount('#app');
-
-/*new Vue({
-    /!*Store,*!/
-    router,
-    ...App
-}).$mount('#app');*/
-
 
 

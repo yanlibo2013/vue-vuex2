@@ -131,7 +131,10 @@ module.exports = {
 
     // 自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名,require('file') 代替 require('file.coffee')
     resolve: {
-        extensions: ['', '.js', '.vue', '.coffee']
+        extensions: ['', '.js', '.vue', '.coffee'],
+        alias: {
+            'components': path.resolve(__dirname, './src/components'),
+        }
     },
 
     // Create Sourcemaps for the bundle
