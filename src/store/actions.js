@@ -1,6 +1,7 @@
 
 
-import * as types from './mutation-types'
+import * as types from './mutation-types';
+import ajax from 'src/common/ajax'
 
 export const getDevicetype = ({ commit }) => {
   var userAgentInfo = navigator.userAgent;
@@ -17,3 +18,14 @@ export const getDevicetype = ({ commit }) => {
     device: dev
   })
 };
+
+
+export const getList = ({ commit }) => {
+
+  ajax({
+    url: '/qm/api/banner/list',
+    success: (result)=>{
+      commit(types.GET_LIST,{result:result.list})
+    }
+  })
+}

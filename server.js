@@ -4,7 +4,27 @@
  * @Last Modified by:   henry yan
  * @Last Modified time: 2016-10-19 16:47:00
  */
-// -- react hot replace
+
+'use strict'
+
+// -- api server
+
+var http = require("http");
+var Api = require("./server_api_define.js").Api;
+
+var api_root_dir = __dirname + "/../api";;
+console.log("root_dir : " + api_root_dir)
+
+var api = new Api();
+var server = http.createServer();
+server.on("request", function(request, response) {
+    api.dispatch(request, response, api_root_dir);
+});
+server.listen(3001);
+
+console.log("-- file api server is running at 3001 port.\n");
+
+// webapck start
 
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
@@ -20,6 +40,10 @@ new WebpackDevServer(webpack(config), {
     stats: { colors: true},
     proxy: {
         '/api/*': {
+            target: 'http://localhost:3001',
+            secure: false
+        },
+        '/qm/*': {
             target: 'http://localhost:3001',
             secure: false
         }

@@ -21,6 +21,7 @@
     /* 注册顶层 App 的 store */
     created () {
       this.$store.dispatch('getDevicetype');
+      this.$store.dispatch('getList');
     },
     mounted () {
       attachFastclick.attach(window.document.body);
@@ -29,6 +30,7 @@
 
 </script>
 <style lang="sass">
+  /*@import "assets/style/main.scss";*/
   .fade-enter-active, .fade-leave-active {
     transition: all .5s ease;
   }

@@ -4,7 +4,8 @@ import * as actions from './actions'
 import * as getters from './getters'
 import createLogger from '../plugins/logger'
 
-import  common from "./modules/common"
+import  common from "./modules/common";
+import  list from "src/store/modules/list"
 
 Vue.use(Vuex);
 
@@ -16,7 +17,8 @@ export default new Vuex.Store({
   actions,
   getters,
   modules: {
-    common
+    common,
+    list
   },
   strict: debug,
   plugins: debug ? [createLogger()] : []
