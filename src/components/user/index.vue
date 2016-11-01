@@ -5,11 +5,13 @@
 * @Last Modified time: 2016-10-19 16:47:00
 */
 <template>
-   <h1>user!!!</h1>
+   <div class="div-app">
+      <h1>user!!!</h1>
+   </div>
 </template>
 <style>
   .div-app{
-      background-color:rebeccapurple;
+      background-color: #36996e;
   }
 </style>
 

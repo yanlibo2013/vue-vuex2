@@ -8,7 +8,7 @@ import  common from "./modules/common"
 
 Vue.use(Vuex);
 
-const debug = process.env.NODE_ENV !== 1
+const debug = process.env.NODE_ENV !== 1;
 
 
 
