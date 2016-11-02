@@ -18,8 +18,6 @@
   import {mapGetters, mapActions } from 'vuex';
    import pc from './pc/index'
    import mobile from './mobile/index_mobile'
-   import device from '../../common/device'
-   //let root=device.judge(pc,mobile);
    export default {
      components: {mobile,pc},
      mounted () {
