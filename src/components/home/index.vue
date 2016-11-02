@@ -8,7 +8,7 @@
   <root></root>
 </template>
 <style>
-  .div-app{
+  .div-home{
       background-color:rebeccapurple;
   }
 </style>
@@ -17,9 +17,8 @@
    import pc from './pc/index'
    import mobile from './mobile/index_mobile'
    import device from '../../common/device'
-
    let root=device.judge(pc,mobile);
-
+   console.log(root);
    export default {
       components: {root}
    }

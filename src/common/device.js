@@ -7,6 +7,8 @@
 
 import store from '../store/index'
 
+/*import { mapGetters, mapActions,mapState  } from 'vuex';*/
+
 /**
  * [judge 判断设备类型，返回对应组件]
  * @param  {[type]} pc     [pc端展示组件]

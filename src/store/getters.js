@@ -1,6 +1,9 @@
-export const checkoutStatus = state => state.cart.checkoutStatus
+export const getDeviceStatus = state => state.common.device;
 
-export const allProducts = state => state.products.all
+
+
+
+/*export const allProducts = state => state.products.all
 
 export const cartProducts = state => {
   return state.cart.added.map(({ id, quantity }) => {
@@ -11,4 +14,4 @@ export const cartProducts = state => {
       quantity
     }
   })
-}
+}*/
