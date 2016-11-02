@@ -5,7 +5,8 @@
 * @Last Modified time: 2016-10-19 16:47:00
 */
 <template>
-  <root></root>
+  <div v-if="device=='MOBILE'"><mobile></mobile></div>
+  <div v-else><pc></pc></div>
 </template>
 <style>
   .div-home{
@@ -14,12 +15,19 @@
 </style>
 
 <script>
+  import {mapGetters, mapActions } from 'vuex';
    import pc from './pc/index'
    import mobile from './mobile/index_mobile'
    import device from '../../common/device'
-   let root=device.judge(pc,mobile);
-   console.log(root);
+   //let root=device.judge(pc,mobile);
    export default {
-      components: {root}
+     components: {mobile,pc},
+     mounted () {
+        console.log(this.$store.state.common);
+        console.log(this.$store.state.common.device);
+     },
+     computed: mapGetters({
+       device: 'getDeviceStatus'
+     })
    }
 </script>
