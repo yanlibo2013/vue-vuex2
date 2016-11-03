@@ -8,9 +8,7 @@
    <h1>home pc!!!</h1>
 </template>
 <style>
-  .div-app{
-      background-color:rebeccapurple;
-  }
+
 </style>
 
 <script>

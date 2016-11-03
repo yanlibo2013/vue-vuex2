@@ -9,9 +9,7 @@
   <div v-else><pc></pc></div>
 </template>
 <style>
-  .div-home{
-      background-color:rebeccapurple;
-  }
+
 </style>
 
 <script>
@@ -21,8 +19,7 @@
    export default {
      components: {mobile,pc},
      mounted () {
-        console.log(this.$store.state.common);
-        console.log(this.$store.state.common.device);
+        //console.log(this.$store.state.common.device);
      },
      computed: mapGetters({
        device: 'getDeviceStatus'
